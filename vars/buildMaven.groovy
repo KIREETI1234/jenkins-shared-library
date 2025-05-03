@@ -3,8 +3,7 @@ def call(String pomPath = '.') {
         agent any
 
         tools {
-            maven 'Maven 3.8.5' 
-            jdk 'JDK 11'        
+            maven 'Maven 3.8.5'
         }
 
         stages {
@@ -13,9 +12,14 @@ def call(String pomPath = '.') {
                     checkout scm
                 }
             }
-            stage('Build with Maven') {
+            stage('Build') {
                 steps {
                     sh "mvn -f ${pomPath}/pom.xml clean install"
+                }
+            }
+            stage('Run') {
+                steps {
+                    sh "java -cp target/hello-world-1.0-SNAPSHOT.jar com.example.HelloWorld"
                 }
             }
         }
