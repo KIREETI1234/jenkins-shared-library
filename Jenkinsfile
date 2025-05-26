@@ -10,7 +10,7 @@ pipeline{
     }
     stage('function call for shared library'){
       script{
-        call();
+        call('kireeti');
       }
     }
   }
