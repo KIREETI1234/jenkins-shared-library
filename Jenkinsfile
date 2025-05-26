@@ -16,7 +16,7 @@ pipeline {
         stage('function call from shared library') {
             steps {
                 script {
-                    call('Kireeti')  // This will call the shared library function
+                    hello_world('Kireeti')  // This will call the shared library function
                 }
             }
         }
