@@ -9,7 +9,9 @@ pipeline{
       git url: 'https://github.com/KIREETI1234/shared-library.git' , branch: 'main'
     }
     stage('function call for shared library'){
-      call();
+      script{
+        call();
+      }
     }
   }
   
