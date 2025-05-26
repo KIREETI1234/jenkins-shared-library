@@ -6,7 +6,7 @@ pipeline {
     //     IMAGE_NAME = 'kireeti1234/helloworld'
     // }
 
-    // stages {
+    stages {
     //     stage('checkout') {
     //         steps {
     //             git url: 'https://github.com/KIREETI1234/jenkins-shared-library.git', branch: 'main'
@@ -21,3 +21,4 @@ pipeline {
             }
         }
     }
+}
