@@ -6,7 +6,10 @@ pipeline{
   }
   stages{
     stage('checkout'){
-      
+      git url: 'https://github.com/KIREETI1234/jenkins-shared-library.git' , branch: 'main'
+    }
+    stage('function call for shared library'){
+      call();
     }
   }
   
